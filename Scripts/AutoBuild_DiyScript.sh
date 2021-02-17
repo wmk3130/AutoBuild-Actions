@@ -4,7 +4,7 @@
 # AutoBuild DiyScript
 
 Diy_Core() {
-	Author=Hyy2001
+	Author=wu
 	Default_Device=d-team_newifi-d2
 
 	INCLUDE_AutoUpdate=true
@@ -13,11 +13,11 @@ Diy_Core() {
 	INCLUDE_mt7621_OC1000MHz=true
 	INCLUDE_Enable_FirewallPort_53=true
 
-	INCLUDE_SSR_Plus=true
-	INCLUDE_Passwall=false
+	INCLUDE_SSR_Plus=false
+	INCLUDE_Passwall=true
 	INCLUDE_HelloWorld=false
 	INCLUDE_Bypass=false
-	INCLUDE_OpenClash=true
+	INCLUDE_OpenClash=false
 }
 
 Diy-Part1() {
@@ -42,10 +42,11 @@ Diy-Part1() {
 
 	ExtraPackages git lean luci-theme-argon https://github.com/jerrykuku 18.06
 	ExtraPackages git other luci-app-argon-config https://github.com/jerrykuku master
-	ExtraPackages git other luci-app-adguardhome https://github.com/Hyy2001X master
+	ExtraPackages git other luci-app-aliddns https://github.com/honwen master
+	# ExtraPackages git other luci-app-adguardhome https://github.com/Hyy2001X master
 	ExtraPackages svn other luci-app-smartdns https://github.com/project-openwrt/openwrt/trunk/package/ntlf9t
-	ExtraPackages git other luci-app-serverchan https://github.com/tty228 master
-	ExtraPackages svn other luci-app-socat https://github.com/Lienol/openwrt-package/trunk
+	# ExtraPackages git other luci-app-serverchan https://github.com/tty228 master
+	# ExtraPackages svn other luci-app-socat https://github.com/Lienol/openwrt-package/trunk
 	ExtraPackages svn other luci-app-usb3disable https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw
 }
 
